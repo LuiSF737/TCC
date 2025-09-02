@@ -1,0 +1,114 @@
+/* ==============================
+   style_EduAcessivel.css
+   ============================== */
+:root {
+  --primary: #3182ce;
+  --secondary: #63b3ed;
+  --dark: #2d3748;
+  --light: #f7fafc;
+  --accent: #81e6d9;
+}
+
+/* Base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: var(--light);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Alto contraste */
+.high-contrast {
+  --light: #000000 !important;
+  --dark: #ffffff !important;
+  --primary: #ffff00 !important;
+  --secondary: #ff0000 !important;
+  background-color: var(--light) !important;
+  color: var(--dark) !important;
+}
+
+.high-contrast header,
+.high-contrast nav,
+.high-contrast footer,
+.high-contrast .bg-white,
+.high-contrast .calculator,
+.high-contrast .calculator-display,
+.high-contrast .focused-content,
+.high-contrast .shadow-md,
+.high-contrast .shadow-lg {
+  background: #000 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+.high-contrast a,
+.high-contrast button {
+  background: #000 !important;
+  color: #ff0 !important;
+  border: 2px solid #ff0 !important;
+}
+
+.high-contrast h1, 
+.high-contrast h2, 
+.high-contrast h3 {
+  color: #0ff !important;
+}
+
+/* Modo Dislexia */
+.dyslexia-mode {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', Arial, sans-serif !important;
+  letter-spacing: 0.12em !important;
+  line-height: 1.9 !important;
+}
+
+/* Tamanhos de texto globais */
+.text-xxl { font-size: 120% !important; }
+.text-xxxl { font-size: 140% !important; }
+body.text-xxl, body.text-xxxl { line-height: 1.8 !important; }
+
+/* Conteúdo focado */
+.focused-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 5px solid var(--primary);
+  padding: 1rem;
+}
+
+/* Modo Leitura */
+.reader-mode {
+  max-width: 750px;
+  margin: 0 auto !important;
+  padding: 2rem !important;
+  font-size: 1.2rem !important;
+  line-height: 1.9 !important;
+  background: #fdfdfd !important;
+}
+
+/* Respeitar usuários com redução de movimento */
+@media (prefers-reduced-motion) {
+  * { transition: none !important; animation: none !important; }
+}
+
+/* Anel de foco claro */
+:focus { outline: 3px solid var(--primary); outline-offset: 2px; }
+[data-whatintent="mouse"] *:focus { outline: none; }
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px; left: 0;
+  background: #000; color: white;
+  padding: 8px; z-index: 100;
+}
+.skip-link:focus { top: 0; }
+
+/* sr-only somente quando não focado/ativo */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

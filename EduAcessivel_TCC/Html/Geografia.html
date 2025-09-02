@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geografia - EduAcessivel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style_EduAcessivel.css" />
+</head>
+<body class="min-h-screen flex flex-col">
+  <a href="#main-content" class="skip-link sr-only" data-i18n="skip_to_content">Ir para conteúdo principal</a>
+
+  <header class="bg-blue-600 text-white py-4 px-6 shadow-md">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+      <h1 class="text-3xl font-bold mb-4 md:mb-0 text-center md:text-left">
+        <a href="index_EduAcessivel.html" class="hover:underline">
+          <span aria-hidden="true">🎓</span> <span data-i18n="site_name">EduAcessivel</span>
+        </a>
+      </h1>
+      <div class="flex flex-wrap justify-center gap-2">
+        <button id="contrast-btn" class="bg-yellow-500 text-black px-3 py-1 rounded hover:bg-yellow-600 focus:bg-yellow-600" data-i18n="btn_contrast">Alto Contraste</button>
+        <button id="text-size-btn" class="bg-purple-500 text-white px-3 py-1 rounded hover:bg-purple-600 focus:bg-purple-600" data-i18n="btn_textsize">A+ Texto</button>
+        <button id="dyslexia-btn" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 focus:bg-green-600" data-i18n="btn_dyslexia">Modo Dislexia</button>
+        <button id="reader-btn" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 focus:bg-red-600" data-i18n="btn_reader">Modo Leitura</button>
+        <button id="language-btn" class="bg-indigo-500 text-white px-3 py-1 rounded hover:bg-indigo-600 focus:bg-indigo-600">PT/EN</button>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Navegação principal" class="bg-blue-700 text-white py-2 px-6 shadow-md">
+    <div class="container mx-auto">
+      <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+        <li><a href="index_EduAcessivel.html#inicio" class="hover:underline px-2 py-1 rounded hover:bg-blue-600 focus:bg-blue-600" data-i18n="nav_home">Início</a></li>
+        <li><a href="index_EduAcessivel.html#materias" class="hover:underline px-2 py-1 rounded hover:bg-blue-600 focus:bg-blue-600" data-i18n="nav_subjects">Matérias</a></li>
+        <li><a href="index_EduAcessivel.html#ferramentas" class="hover:underline px-2 py-1 rounded hover:bg-blue-600 focus:bg-blue-600" data-i18n="nav_tools">Ferramentas</a></li>
+        <li><a href="index_EduAcessivel.html#recursos" class="hover:underline px-2 py-1 rounded hover:bg-blue-600 focus:bg-blue-600" data-i18n="nav_resources">Recursos</a></li>
+        <li><a href="index_EduAcessivel.html#contato" class="hover:underline px-2 py-1 rounded hover:bg-blue-600 focus:bg-blue-600" data-i18n="nav_contact">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content" class="flex-grow container mx-auto px-4 py-6">
+    <section id="geografia-content" class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">🌍 <span data-i18n="subject_geo">Geografia</span></h2>
+      <p data-i18n="geo_intro">Estudo de mapas, climas e interações humanas com o ambiente.</p>
+
+      <div class="bg-white p-4 rounded-lg shadow mt-4">
+        <h3 class="text-xl font-semibold mb-2">Vídeo Aula: Climas do Mundo</h3>
+        <div class="aspect-w-16 aspect-h-9 mb-4">
+          <!-- Exemplo de vídeo do YouTube. Substitua pelo link real da sua vídeo aula -->
+          <iframe class="w-full h-96" src="https://www.youtube.com/embed/your-geography-video-id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p>Nesta aula, exploraremos os diferentes tipos de climas ao redor do mundo e seus fatores.</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-lg shadow mt-4">
+        <h3 class="text-xl font-semibold mb-2">Vídeo Aula: Formação do Relevo</h3>
+        <div class="aspect-w-16 aspect-h-9 mb-4">
+          <iframe class="w-full h-96" src="https://www.youtube.com/embed/your-relief-video-id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p>Entenda os processos geológicos que moldam a superfície terrestre.</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-lg shadow mt-4">
+        <h3 class="text-xl font-semibold mb-2" data-i18n="map_title">Mapa Interativo</h3>
+        <p data-i18n="map_desc">Explore os continentes e climas do planeta.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/800px-World_map_-_low_resolution.svg.png" alt="Mapa Mundi" class="w-full h-auto mt-2 rounded shadow">
+      </div>
+
+      <!-- Adicione mais conteúdo específico de geografia aqui -->
+
+    </section>
+  </main>
+
+  <footer class="bg-blue-800 text-white py-6 px-6 mt-12">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-3" data-i18n="site_name">EduAcessivel</h3>
+          <p data-i18n="footer_tagline">Educação acessível para todos.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-3" data-i18n="quick_links">Links Rápidos</h3>
+          <ul class="space-y-2">
+            <li><a href="index_EduAcessivel.html#inicio" class="hover:underline" data-i18n="nav_home">Início</a></li>
+            <li><a href="index_EduAcessivel.html#materias" class="hover:underline" data-i18n="nav_subjects">Matérias</a></li>
+            <li><a href="index_EduAcessivel.html#ferramentas" class="hover:underline" data-i18n="nav_tools">Ferramentas</a></li>
+            <li><a href="index_EduAcessivel.html#recursos" class="hover:underline" data-i18n="nav_resources">Recursos</a></li>
+            <li><a href="index_EduAcessivel.html#contato" class="hover:underline" data-i18n="nav_contact">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-3" data-i18n="a11y_title">Acessibilidade</h3>
+          <p class="mb-2" data-i18n="a11y_commit">Nosso compromisso é com a inclusão de todos os estudantes.</p>
+          <p data-i18n="a11y_report_label">Relate problemas de acessibilidade:</p>
+          <button id="report-a11y-btn" class="bg-yellow-500 text-black px-3 py-1 rounded mt-2 hover:bg-yellow-600 focus:bg-yellow-600" data-i18n="a11y_report_btn">Relatar Problema</button>
+        </div>
+      </div>
+      <div class="border-t border-blue-700 mt-6 pt-6 text-center">
+        <p>© 2025 <span data-i18n="site_name">EduAcessivel</span>. <span data-i18n="rights_reserved">Todos os direitos reservados.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

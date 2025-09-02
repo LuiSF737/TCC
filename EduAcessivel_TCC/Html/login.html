@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - EduAcessivel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style_EduAcessivel.css">
+</head>
+<body class="min-h-screen flex items-center justify-center bg-blue-100">
+
+  <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+    <h1 class="text-2xl font-bold text-center text-blue-700 mb-6">EduAcessivel</h1>
+
+    <!-- Abas Login / Cadastro -->
+    <div class="flex justify-center mb-6">
+      <button id="tab-login" class="px-4 py-2 bg-blue-600 text-white rounded-l-lg">Login</button>
+      <button id="tab-register" class="px-4 py-2 bg-gray-200 text-blue-700 rounded-r-lg">Cadastro</button>
+    </div>
+
+    <!-- Formulário Login -->
+    <form id="login-form" class="space-y-4">
+      <input type="email" placeholder="Email" required class="w-full p-2 border rounded">
+      <input type="password" placeholder="Senha" required class="w-full p-2 border rounded">
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Entrar</button>
+    </form>
+
+    <!-- Formulário Cadastro -->
+    <form id="register-form" class="space-y-4 hidden">
+      <input type="text" placeholder="Nome completo" required class="w-full p-2 border rounded">
+      <input type="email" placeholder="Email" required class="w-full p-2 border rounded">
+      <input type="password" placeholder="Senha" required class="w-full p-2 border rounded">
+      <button type="submit" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Cadastrar</button>
+    </form>
+
+    <p class="text-sm text-center mt-4 text-gray-600">© 2025 EduAcessivel</p>
+  </div>
+
+  <script>
+    const tabLogin = document.getElementById('tab-login');
+    const tabRegister = document.getElementById('tab-register');
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+
+    // Alternar entre login e cadastro
+    tabLogin.addEventListener('click', () => {
+      loginForm.classList.remove('hidden');
+      registerForm.classList.add('hidden');
+      tabLogin.classList.add('bg-blue-600','text-white');
+      tabLogin.classList.remove('bg-gray-200','text-blue-700');
+      tabRegister.classList.remove('bg-green-600','text-white');
+      tabRegister.classList.add('bg-gray-200','text-blue-700');
+    });
+
+    tabRegister.addEventListener('click', () => {
+      loginForm.classList.add('hidden');
+      registerForm.classList.remove('hidden');
+      tabRegister.classList.add('bg-green-600','text-white');
+      tabRegister.classList.remove('bg-gray-200','text-blue-700');
+      tabLogin.classList.remove('bg-blue-600','text-white');
+      tabLogin.classList.add('bg-gray-200','text-blue-700');
+    });
+
+    // Simular login/cadastro -> redirecionar
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      window.location.href = "index_EduAcessivel.html";
+    });
+
+    registerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      window.location.href = "index_EduAcessivel.html";
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduAcessivel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style_EduAcessivel.css" />
+</head>
+<body class="min-h-screen flex flex-col">
+  <a href="#main-content" class="skip-link sr-only" data-i18n="skip_to_content">Ir para conteúdo principal</a>
+
+  <header class="bg-blue-600 text-white py-4 px-6 shadow-md">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+      <h1 class="text-3xl font-bold mb-4 md:mb-0 text-center md:text-left">
+        <a href="#main-content" class="hover:underline">
+          <span aria-hidden="true">🎓</span> <span data-i18n="site_name">EduAcessivel</span>
+        </a>
+      </h1>
+      <div class="flex flex-wrap justify-center gap-2">
+        <button id="contrast-btn" class="bg-yellow-500 text-black px-3 py-1 rounded hover:bg-yellow-600 focus:bg-yellow-600" data-i18n="btn_contrast">Alto Contraste</button>
+        <button id="text-size-btn" class="bg-purple-500 text-white px-3 py-1 rounded hover:bg-purple-600 focus:bg-purple-600" data-i18n="btn_textsize">A+ Texto</button>
+        <button id="dyslexia-btn" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 focus:bg-green-600" data-i18n="btn_dyslexia">Modo Dislexia</button>
+        <button id="reader-btn" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 focus:bg-red-600" data-i18n="btn_reader">Modo Leitura</button>
+        <button id="language-btn" class="bg-indigo-500 text-white px-3 py-1 rounded hover:bg-indigo-600 focus:bg-indigo-600">PT/EN</button>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Navegação principal" class="bg-blue-700 text-white py-2 px-6 shadow-md">
+    <div class="container mx-auto">
+      <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+        <li><a href="#inicio" class="hover:underline px-2 py-1 rounded hover:bg-blue-600 focus:bg-blue-600" data-i18n="nav_home">Início</a></li>
+        <li><a href="#materias" class="hover:underline px-2 py-1 rounded hover:bg-blue-600 focus:bg-blue-600" data-i18n="nav_subjects">Matérias</a></li>
+        <li><a href="#ferramentas" class="hover:underline px-2 py-1 rounded hover:bg-blue-600 focus:bg-blue-600" data-i18n="nav_tools">Ferramentas</a></li>
+        <li><a href="#recursos" class="hover:underline px-2 py-1 rounded hover:bg-blue-600 focus:bg-blue-600" data-i18n="nav_resources">Recursos</a></li>
+        <li><a href="#contato" class="hover:underline px-2 py-1 rounded hover:bg-blue-600 focus:bg-blue-600" data-i18n="nav_contact">Contato</a></li>
+        <li><a href="Créditos.html" class="hover:underline px-2 py-1 rounded hover:bg-blue-600 focus:bg-blue-600" data-i18n="nav_credits">Créditos</a></li> 
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content" class="flex-grow container mx-auto px-4 py-6">
+    <section id="inicio" class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 text-blue-800" data-i18n="welcome_title">Bem-vindo ao EduAcessivel</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="focused-content">
+          <h3 class="text-xl font-semibold mb-4 text-blue-700" data-i18n="purpose_title">Nosso Propósito</h3>
+          <p class="mb-4" data-i18n="purpose_p1">Somos estudantes que estão completando o ensino médio e queremos ajudar os alunos que têm dificuldades (física, visual, auditiva, intelectual e psicossocial).</p>
+          <p data-i18n="purpose_p2">Nosso objetivo é proporcionar uma experiência de aprendizagem acessível, inclusiva e eficaz para todos.</p>
+        </div>
+        <div>
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8545b086-5954-4a7b-9ae8-c18504c635dd.png" alt="Grupo diversificado de estudantes colaborando, incluindo alunos com diferentes necessidades especiais" class="w-full h-auto rounded-lg shadow-md">
+        </div>
+      </div>
+    </section>
+
+    <section id="materias" class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 text-blue-800" data-i18n="subjects_title">Matérias Disponíveis</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-100 p-3 rounded-full mr-4"><span class="text-blue-600 font-bold">1</span></div>
+            <h3 class="text-xl font-semibold text-blue-700" data-i18n="subject_math">Matemática</h3>
+          </div>
+          <p class="mb-4" data-i18n="subject_math_desc">Conceitos básicos até avançados com explicações passo a passo e exercícios práticos.</p>
+          <a target="_blank" href="./Matemática.html" class="text-blue-600 hover:underline focus:underline font-medium" data-i18n="access_content">Acessar conteúdos →</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <div class="flex items-center mb-4">
+            <div class="bg-red-100 p-3 rounded-full mr-4"><span class="text-red-600 font-bold">2</span></div>
+            <h3 class="text-xl font-semibold text-red-700" data-i18n="subject_port">Português</h3>
+          </div>
+          <p class="mb-4" data-i18n="subject_port_desc">Gramática, interpretação de texto e produção textual com ferramentas de auxílio.</p>
+          <a target="_blank" href="./Português.html" class="text-red-600 hover:underline focus:underline font-medium" data-i18n="access_content">Acessar conteúdos →</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <div class="flex items-center mb-4">
+            <div class="bg-green-100 p-3 rounded-full mr-4"><span class="text-green-600 font-bold">3</span></div>
+            <h3 class="text-xl font-semibold text-green-700" data-i18n="subject_sci">Ciências</h3>
+          </div>
+          <p class="mb-4" data-i18n="subject_sci_desc">Biologia, Física e Química com experimentos virtuais e explicações visuais.</p>
+          <a target="_blank" href="./Ciências.html" class="text-green-600 hover:underline focus:underline font-medium" data-i18n="access_content">Acessar conteúdos →</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <div class="flex items-center mb-4">
+            <div class="bg-yellow-100 p-3 rounded-full mr-4"><span class="text-yellow-600 font-bold">4</span></div>
+            <h3 class="text-xl font-semibold text-yellow-700" data-i18n="subject_hist">História</h3>
+          </div>
+          <p class="mb-4" data-i18n="subject_hist_desc">Linha do tempo interativa e recursos multimídia para melhor compreensão.</p>
+          <a target="_blank" href="./História.html" class="text-yellow-600 hover:underline focus:underline font-medium" data-i18n="access_content">Acessar conteúdos →</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <div class="flex items-center mb-4">
+            <div class="bg-purple-100 p-3 rounded-full mr-4"><span class="text-purple-600 font-bold">5</span></div>
+            <h3 class="text-xl font-semibold text-purple-700" data-i18n="subject_geo">Geografia</h3>
+          </div>
+          <p class="mb-4" data-i18n="subject_geo_desc">Mapas interativos e recursos visuais para estudo de relevo, clima e sociedade.</p>
+          <a target="_blank" href="./História.html" class="text-purple-600 hover:underline focus:underline font-medium" data-i18n="access_content">Acessar conteúdos →</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <div class="flex items-center mb-4">
+            <div class="bg-indigo-100 p-3 rounded-full mr-4"><span class="text-indigo-600 font-bold">6</span></div>
+            <h3 class="text-xl font-semibold text-indigo-700" data-i18n="subject_eng">Inglês</h3>
+          </div>
+          <p class="mb-4" data-i18n="subject_eng_desc">Aprendizado de inglês com ferramentas de pronúncia e vocabulário visual.</p>
+          <a target="_blank" href="./Inglês.html" class="text-indigo-600 hover:underline focus:underline font-medium" data-i18n="access_content">Acessar conteúdos →</a>
+        </div>
+      </div>
+    </section>
+
+
+   
+
+    <section id="ferramentas" class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 text-blue-800" data-i18n="tools_title">Ferramentas de Apoio</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4 text-blue-700" data-i18n="tts_title">Leitor de Texto</h3>
+          <div class="mb-4">
+            <textarea id="text-to-read" class="w-full p-3 border border-gray-300 rounded mb-2" rows="4" placeholder="Cole ou digite o texto aqui..." data-i18n-placeholder="tts_placeholder"></textarea>
+            <button id="read-btn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:bg-blue-700" data-i18n="tts_read">Ler Texto</button>
+            <button id="stop-read-btn" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 focus:bg-gray-600 ml-2" data-i18n="tts_stop">Parar</button>
+          </div>
+          <div class="flex items-center">
+            <label for="voice-select" class="mr-2" data-i18n="tts_voice">Voz:</label>
+            <select id="voice-select" class="p-2 border rounded"></select>
+            <label for="rate" class="ml-4 mr-2" data-i18n="tts_rate">Velocidade:</label>
+            <input type="range"  id="rate" min="0.5" max="2" step="0.1" value="1" class="w-20">
+            <span id="rate-value">1</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4 text-blue-700" data-i18n="calc_title">Calculadora Científica</h3>
+          <div class="calculator bg-gray-100 p-4 rounded">
+            <div class="calculator-display bg-white p-3 mb-3 text-right text-2xl font-mono overflow-x-auto" id="calculator-display">0</div>
+            <div class="grid grid-cols-4 gap-2">
+              <button class="calc-btn bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:bg-blue-600" aria-label="Sete">7</button>
+              <button class="calc-btn bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:bg-blue-600">8</button>
+              <button class="calc-btn bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:bg-blue-600">9</button>
+              <button class="calc-btn bg-red-500 text-white p-2 rounded hover:bg-red-600 focus:bg-red-600" data-i18n="calc_clear">C</button>
+              <button class="calc-btn bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:bg-blue-600">4</button>
+              <button class="calc-btn bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:bg-blue-600">5</button>
+              <button class="calc-btn bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:bg-blue-600">6</button>
+              <button class="calc-btn bg-yellow-500 text-white p-2 rounded hover:bg-yellow-600 focus:bg-yellow-600">+</button>
+              <button class="calc-btn bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:bg-blue-600">1</button>
+              <button class="calc-btn bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:bg-blue-600">2</button>
+              <button class="calc-btn bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:bg-blue-600">3</button>
+              <button class="calc-btn bg-yellow-500 text-white p-2 rounded hover:bg-yellow-600 focus:bg-yellow-600">-</button>
+              <button class="calc-btn bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:bg-blue-600">0</button>
+              <button class="calc-btn bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:bg-blue-600">.</button>
+              <button class="calc-btn bg-green-500 text-white p-2 rounded hover:bg-green-600 focus:bg-green-600">=</button>
+              <button class="calc-btn bg-yellow-500 text-white p-2 rounded hover:bg-yellow-600 focus:bg-yellow-600">×</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recursos" class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 text-blue-800" data-i18n="resources_title">Recursos Especiais</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f52a328e-6714-4485-966a-914fc77a5704.png" alt="Ícone de conteúdo multimodal" class="mx-auto mb-4 w-24 h-24">
+          <h3 class="text-xl font-semibold mb-2 text-blue-700" data-i18n="resources_item1">Conteúdo Multimodal</h3>
+          <p data-i18n="resources_item1_desc">Explicações em texto, áudio e vídeo para diferentes estilos de aprendizagem.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/465f3d22-9cb0-43e5-9d7b-3243bedf2501.png" alt="Ícone de cronômetro e lista de tarefas" class="mx-auto mb-4 w-24 h-24">
+          <h3 class="text-xl font-semibold mb-2 text-blue-700" data-i18n="resources_item2">Tempo Flexível</h3>
+          <p data-i18n="resources_item2_desc">Estude no seu próprio ritmo sem pressão, com cronômetro de pomodoro opcional.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8992cd7b-b6ed-4338-bfe4-98e6aa1d0f4f.png" alt="Ícone de múltiplas telas com legendas" class="mx-auto mb-4 w-24 h-24">
+          <h3 class="text-xl font-semibold mb-2 text-blue-700" data-i18n="resources_item3">Ajustes Personalizados</h3>
+          <p data-i18n="resources_item3_desc">Modifique tamanho do texto, cores e layout conforme suas necessidades.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 text-blue-800" data-i18n="contact_title">Contato e Suporte</h2>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <p class="mb-4" data-i18n="contact_intro">Tem dúvidas ou sugestões para melhorar nosso portal? Entre em contato!</p>
+        <form id="contact-form" class="space-y-4">
+          <div>
+            <label for="name" class="block mb-1 font-medium" aria-required="true" data-i18n="label_name">Nome (obrigatório):</label>
+            <input type="text" id="name" class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500" required placeholder="Seu nome" data-i18n-placeholder="ph_name">
+          </div>
+          <div>
+            <label for="email" class="block mb-1 font-medium" data-i18n="label_email">Email:</label>
+            <input type="email" id="email" class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500" required placeholder="seu@email.com" data-i18n-placeholder="ph_email">
+          </div>
+          <div>
+            <label for="message" class="block mb-1 font-medium" data-i18n="label_message">Mensagem:</label>
+            <textarea id="message" rows="4" class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500" required placeholder="Escreva sua mensagem..." data-i18n-placeholder="ph_message"></textarea>
+          </div>
+          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:bg-blue-700" data-i18n="btn_send">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-blue-800 text-white py-6 px-6 mt-12">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-3" data-i18n="site_name">EduAcessivel</h3>
+          <p data-i18n="footer_tagline">Educação acessível para todos.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-3" data-i18n="quick_links">Links Rápidos</h3>
+          <ul class="space-y-2">
+            <li><a href="#inicio" class="hover:underline" data-i18n="nav_home">Início</a></li>
+            <li><a href="#materias" class="hover:underline" data-i18n="nav_subjects">Matérias</a></li>
+            <li><a href="#ferramentas" class="hover:underline" data-i18n="nav_tools">Ferramentas</a></li>
+            <li><a href="#recursos" class="hover:underline" data-i18n="nav_resources">Recursos</a></li>
+            <li><a href="#contato" class="hover:underline" data-i18n="nav_contact">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-3" data-i18n="a11y_title">Acessibilidade</h3>
+          <p class="mb-2" data-i18n="a11y_commit">Nosso compromisso é com a inclusão de todos os estudantes.</p>
+          <p data-i18n="a11y_report_label">Relate problemas de acessibilidade:</p>
+          <button id="report-a11y-btn" class="bg-yellow-500 text-black px-3 py-1 rounded mt-2 hover:bg-yellow-600 focus:bg-yellow-600" data-i18n="a11y_report_btn">Relatar Problema</button>
+        </div>
+      </div>
+      <div class="border-t border-blue-700 mt-6 pt-6 text-center">
+        <p>© 2025 <span data-i18n="site_name">EduAcessivel</span>. <span data-i18n="rights_reserved">Todos os direitos reservados.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
